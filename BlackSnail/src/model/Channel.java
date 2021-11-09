@@ -285,7 +285,7 @@ public class Channel{
 		Serie serie;
 		for (int i=0;i<products.length;i++) {
 			if (products[i]!=null) {
-				if ((products[i].getName()).equals(nameSerie)) {
+				if ((products[i].getName()).equalsIgnoreCase(nameSerie)) {
 					serie = (Serie)products[i];
 					serie.createSeason( num,  episodesProgram,  episodesPublic,  date,  trailer);
 				}
@@ -301,7 +301,7 @@ public class Channel{
 		String out= "";
 		for (int i=0;i<products.length;i++) {
 			if (products[i]!=null) {
-				if ((products[i].getName()).equals(name)) {
+				if ((products[i].getName()).equalsIgnoreCase(name)) {
 					out=products[i].toString();
 				}
 			}
